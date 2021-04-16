@@ -1,4 +1,7 @@
 <?php
+
+include 'monthEngtoMal.php';
+
 $inputnama = $_POST['nama'];
 $inputnokp = $_POST['nokp'];
 $userID = $_POST['userID'];
@@ -7,46 +10,8 @@ $curDay= date('j');
 $curMonth1= date('F'); 
 $curYear= date('Y'); 
 
-//Convert month in english to Malay
-switch ($curMonth1){
-    case "January":
-        $month = 'Januari';
-    break;
-    case "February":
-        $month = 'Februari';
-    break;
-    case "March":
-        $month = 'Mac';
-    break;
-    case "April":
-        $month = 'April';
-    break;
-    case "May":
-        $month = 'Mei';
-    break;
-    case "June":
-        $month = 'Jun';
-    break;
-    case "July":
-        $month = 'Julai';
-    break;
-    case "August":
-        $month = 'Ogos';
-    break;
-    case "September":
-        $month = 'September';
-    break;
-    case "October":
-        $month = 'Oktober';
-    break;
-    case "November":
-        $month = 'November';
-    break;
-    case "December":
-        $month = 'Disember';
-    break;
-}
- 
+$month = dateEngtoMal($curMonth1); //Convert month in english to Malay
+
 $current_date = $curDay." ".$month." ".$curYear;
 $image = imagecreatefromjpeg('SIJIL EJEN WAKAF.jpg');
 $textcolor = imagecolorallocate($image, 0, 0, 0);
