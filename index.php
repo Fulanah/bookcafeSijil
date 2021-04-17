@@ -16,7 +16,7 @@ $cscartapi = new CSCartApi(
     array(
         'api_key' => '9M498W25425J8EF1M59i5jR4g65ufSwP',
         'user_login' => 'fared@pts.com.my',
-        'api_url' => 'http://bco.com.my/'
+        'api_url' =>'http://bookcafe.com.my/'
 
        /* 'api_key' => 'S303Pphg6o35o5iZ5fj0f51219L4453u',
         'user_login' => 'balqis@pts.com.my',
@@ -65,13 +65,13 @@ if(($email!="") and isset($_POST['submitemail'])){
             </div>
             <button type="submit" name="submitemail" class="btn">HANTAR</button>
             </form> <?php
-    }else if($email != $CSemail){
+    }else if($CSemail==""){
         ?><p><strong style="color: red;">Harap maaf. Emel anda tidak dijumpai.<strong></p> 
           <form action ="index.php"><button type="submit" class="btn" >KEMBALI</button></form>
         <?php
     }else{
         echo "<p> </p>";
-        print("Tahniah! Anda adalah Dropshipper BCO yang sah."); 
+        ?> <p><strong style="color: green;">Tahniah! Anda adalah Dropshipper BCO yang sah.<strong></p> <?php
      
     $userID = $usergroups["users"][0]->user_id; //get user_id
     $timereg = $usergroups["users"][0]->timestamp; //get date registered via timestamp
