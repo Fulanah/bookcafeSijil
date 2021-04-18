@@ -28,6 +28,7 @@ imagettftext($image, $font_size, 0, 757, 2119, $textcolor, $font_file, $datereg)
 
 //output image
 header('Content-type: image/jpeg');
+header('Content-Disposition: attachment; filename=SIJIL EJEN BUKU.jpg');
 imagejpeg($image);
 imagedestroy($image); // for clearing memory
 
