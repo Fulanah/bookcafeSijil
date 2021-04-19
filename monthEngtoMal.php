@@ -1,6 +1,6 @@
 <?php 
 
-function dateEngtoMal(&$datemonth1){
+function dateEngtoMal($datemonth1){
     
     switch ($datemonth1){
         case "January":
